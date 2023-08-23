@@ -12,20 +12,22 @@ const darkColors: [string] = JSON.parse(process.env.NEXT_PUBLIC_BRAND_COLOR_PALE
 export function HeroSection() {
   return (
     <section className="mx-auto max-w-2xl py-10 sm:py-20 lg:py-32">
-      <div className="hidden sm:mb-8 sm:flex sm:justify-center">
+      <div className="mb-8 flex justify-center">
         {image && (
-          <div className="relative h-24 w-72 overflow-hidden rounded-lg">
+          <div className="relative h-24 w-24 overflow-hidden rounded-lg">
             <Image src={image} alt="brand logo" fill />
           </div>
         )}
       </div>
       <div className="grid place-content-center text-center">
-        <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">{name} Shopify Storefront</h1>
+        <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
+          {name.toUpperCase()} Shopify Storefront
+        </h1>
         <p className="mt-6 text-lg leading-8 text-gray-600">
           This is a shopify template for demonstration purposes only
         </p>
-        <div className="mt-5 flex max-w-xl items-center justify-between">
-          <h3 className=" text-lg font-bold">Primary Colors</h3>
+        <div className="mt-5 flex max-w-xl flex-col items-center justify-between sm:flex-row">
+          <h3 className="text-left text-lg font-bold">Primary Colors</h3>
           <div className="mt-2 flex items-center justify-center space-x-2">
             {primaryColors &&
               Object.values(primaryColors).map((backgroundColor) => (
@@ -33,8 +35,8 @@ export function HeroSection() {
               ))}
           </div>
         </div>
-        <div className="mt-5 flex max-w-xl items-center justify-between">
-          <h3 className=" text-lg font-bold">Secondary Colors</h3>
+        <div className="mt-5 flex max-w-xl flex-col items-center justify-between sm:flex-row">
+          <h3 className="text-left text-lg font-bold">Secondary Colors</h3>
           <div className="mt-2 flex items-center justify-center space-x-2">
             {secondaryColors &&
               Object.values(secondaryColors).map((backgroundColor) => (
@@ -42,8 +44,8 @@ export function HeroSection() {
               ))}
           </div>
         </div>
-        <div className="mt-5 flex max-w-xl items-center justify-between">
-          <h3 className=" text-lg font-bold">Dark Colors</h3>
+        <div className="mt-5 flex max-w-xl flex-col items-center justify-between sm:flex-row">
+          <h3 className="text-left text-lg font-bold">Dark Colors</h3>
           <div className="mt-2 flex items-center justify-center space-x-2">
             {darkColors &&
               Object.values(darkColors).map((backgroundColor) => (
