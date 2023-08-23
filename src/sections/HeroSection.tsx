@@ -1,9 +1,9 @@
 import { NextLink } from '@site/utilities/deps';
 import Image from 'next/image';
 
-const image = process.env.NEXT_PUBLIC_BRAND_LOGO;
-const repo = process.env.NEXT_PUBLIC_REPO;
-const name = process.env.NEXT_PUBLIC_BRAND_NAME;
+const image: string = process.env.NEXT_PUBLIC_BRAND_LOGO as string;
+const repo: string = process.env.NEXT_PUBLIC_REPO as string;
+const name: string = process.env.NEXT_PUBLIC_BRAND_NAME as string;
 
 const primaryColors: [string] = JSON.parse(process.env.NEXT_PUBLIC_BRAND_COLOR_PALETTE_PRIMARY || '[]');
 const secondaryColors: [string] = JSON.parse(process.env.NEXT_PUBLIC_BRAND_COLOR_PALETTE_SECONDARY || '[]');
