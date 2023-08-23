@@ -55,7 +55,7 @@ export function CartSection() {
 
                   <div className="flex">
                     <CartLineQuantityAdjustButton
-                      className="font-medium text-indigo-600 hover:text-indigo-500"
+                      className="font-medium text-primary-600 hover:text-primary-500"
                       adjust="remove"
                     >
                       Remove
@@ -80,7 +80,7 @@ export function CartSection() {
         </div>
         <p className="mt-0.5 text-sm text-gray-500">Shipping and taxes calculated at checkout.</p>
         <div className="mt-6 flex">
-          <CartCheckoutButton className="flex-1 rounded-md border border-transparent bg-indigo-600 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-indigo-700">
+          <CartCheckoutButton className="flex-1 rounded-md border border-transparent bg-primary-600 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-primary-700">
             Checkout
           </CartCheckoutButton>
         </div>
@@ -88,7 +88,7 @@ export function CartSection() {
           <p>
             <span>or</span>
             <span> </span>
-            <NextLink href="/products" className="font-medium text-indigo-600 hover:text-indigo-500">
+            <NextLink href="/products" className="font-medium text-primary-600 hover:text-primary-500">
               Continue Shopping
               <span aria-hidden="true"> &rarr;</span>
             </NextLink>
