@@ -29,7 +29,7 @@ export function HeroSection() {
           <div className="mt-2 flex space-x-2 justify-center items-center">
             {primaryColors &&
               Object.values(primaryColors).map((backgroundColor) => (
-                <div className="w-5 h-5 rounded" style={{ backgroundColor }} />
+                <div key={backgroundColor} className="w-5 h-5 rounded" style={{ backgroundColor }} />
               ))}
           </div>
         </div>
@@ -38,7 +38,7 @@ export function HeroSection() {
           <div className="mt-2 flex space-x-2 justify-center items-center">
             {secondaryColors &&
               Object.values(secondaryColors).map((backgroundColor) => (
-                <div className="w-5 h-5 rounded" style={{ backgroundColor }} />
+                <div key={backgroundColor} className="w-5 h-5 rounded" style={{ backgroundColor }} />
               ))}
           </div>
         </div>
@@ -47,7 +47,7 @@ export function HeroSection() {
           <div className="mt-2 flex space-x-2 justify-center items-center">
             {darkColors &&
               Object.values(darkColors).map((backgroundColor) => (
-                <div className="w-5 h-5 rounded" style={{ backgroundColor }} />
+                <div key={backgroundColor} className="w-5 h-5 rounded" style={{ backgroundColor }} />
               ))}
           </div>
         </div>
