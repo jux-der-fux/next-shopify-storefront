@@ -1,13 +1,14 @@
 import { NextLink } from '@site/utilities/deps';
 import Image from 'next/image';
+import { StringDecoder } from 'string_decoder';
 
 const image = process.env.NEXT_PUBLIC_BRAND_LOGO;
 const repo = process.env.NEXT_PUBLIC_REPO;
 const name = process.env.NEXT_PUBLIC_BRAND_NAME;
 
-const primaryColors = JSON.parse(process.env.NEXT_PUBLIC_BRAND_COLOR_PALETTE_PRIMARY || '');
-const secondaryColors = JSON.parse(process.env.NEXT_PUBLIC_BRAND_COLOR_PALETTE_SECONDARY || '');
-const darkColors = JSON.parse(process.env.NEXT_PUBLIC_BRAND_COLOR_PALETTE_DARK || '');
+const primaryColors: [string] = JSON.parse(process.env.NEXT_PUBLIC_BRAND_COLOR_PALETTE_PRIMARY || '[]');
+const secondaryColors: [string] = JSON.parse(process.env.NEXT_PUBLIC_BRAND_COLOR_PALETTE_SECONDARY || '[]');
+const darkColors: [string] = JSON.parse(process.env.NEXT_PUBLIC_BRAND_COLOR_PALETTE_DARK || '[]');
 
 export function HeroSection() {
   return (
