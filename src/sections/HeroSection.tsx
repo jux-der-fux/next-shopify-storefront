@@ -5,9 +5,9 @@ const image = process.env.NEXT_PUBLIC_BRAND_LOGO;
 const repo = process.env.NEXT_PUBLIC_REPO;
 const name = process.env.NEXT_PUBLIC_BRAND_NAME;
 
-const primaryColors = JSON.parse(process.env.NEXT_PUBLIC_BRAND_COLOR_PALETTE_PRIMARY);
-const secondaryColors = JSON.parse(process.env.NEXT_PUBLIC_BRAND_COLOR_PALETTE_SECONDARY);
-const darkColors = JSON.parse(process.env.NEXT_PUBLIC_BRAND_COLOR_PALETTE_DARK);
+const primaryColors = JSON.parse(process.env.NEXT_PUBLIC_BRAND_COLOR_PALETTE_PRIMARY || '');
+const secondaryColors = JSON.parse(process.env.NEXT_PUBLIC_BRAND_COLOR_PALETTE_SECONDARY || '');
+const darkColors = JSON.parse(process.env.NEXT_PUBLIC_BRAND_COLOR_PALETTE_DARK || '');
 
 export function HeroSection() {
   return (
